@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+    
+    function onSubmit (){
+
+      alert("Response Submitted! We'll get back to you!");
+    
+    }
+
+      
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dyslexia</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+      {% if messages %} 
+        <ul id="flash-messages"> 
+          {% for category, message in messages %} 
+            <li class="flash-message {{ category }}">{{ message }}</li> 
+          {% endfor %} 
+        </ul> 
+      {% endif %} 
+    {% endwith %}  
+
+    <header class="navbar">
+      <div class="logo">DysAid</div>
+      <div class="nav-container">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#awareness">About</a></li>
+            <li>
+              <form id="redirect" action="/run-streamlit" method="get">
+                <button type="submit">Test</button>
+              </form>
+            </li>
+            <li><a href="/exp">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="hero">
+      <div class="intro" data-aos="zoom-in" data-aos-duration="1500">
+        <p class="head">Understanding Dyslexia in Education Today</p>
+        <div class="sub">
+          <form class="sub_inp" action="/" method="post">
+            <input type="email" placeholder="name@domain.com" name="subscribe_email" id="subscribe_email" required />
+            <button class="sub_btn">Subscribe Now</button>
+          </form>
+          <p>
+            <span
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+            ></span>
+            Rated 5 Stars by Educators
+          </p>
+          <p class="desc">97% of users find our resources helpful!</p>
+        </div>
+      </div>
+      <!-- <img src="./assets/hero_img.jpg" alt="" srcset="" /> -->
+    </div>
+
+    
+    <div id="usp">
+      <p class="subhead">Empowering Education Through Awareness</p>
+      <div class="usps" data-aos="fade-right" data-aos-duration="1000">
+        <div class="item">
+          <img src="../static/assets/usp_3.svg" alt="" />
+          <p class="title">Informative Resources</p>
+          <p class="desc">
+            Explore engaging materials designed to enhance understanding of
+            dyslexia and its impacts.
+          </p>
+        </div>
+        <div class="item">
+          <img src="../static/assets/usp_2.svg" alt="" />
+          <p class="title">Expert Guidance</p>
+          <p class="desc">
+            Receive insights and advice from professionals specialized in
+            dyslexia education and support.
+          </p>
+        </div>
+        <div class="item">
+          <img src="../static/assets/usp_1.svg" alt="" />
+          <p class="title">Inclusive Strategies</p>
+          <p class="desc">
+            Discover effective learning strategies tailored for individuals with
+            dyslexia to maximize success.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="awareness">
+      <div class="row">
+        <div class="image">
+          <img src="../static/assets/WhatsApp Image 2024-10-09 at 23.50.31_68fc073c.jpg" alt="" />
+          <div class="metric">
+            <p class="subhead">800+</p>
+            <p class="desc">Learn More</p>
+          </div>
+        </div>
+        <div class="content">
+          <p class="subhead">Empowering Families and Educators Together</p>
+          <p class="desc">
+            Dyslexia Awareness Network offers diverse resources to educate and
+            empower individuals, educators, and parents about dyslexia.
+          </p>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="content">
+          <p class="subhead">Learn about Dyslexia Awareness Programs</p>
+          <p class="desc">
+            Our unique programs foster understanding and advocacy to create a
+            supportive learning environment.
+          </p>
+        </div>
+        <div class="content l">
+          <div class="l-item">
+            <p class="subhead">Support for Parents</p>
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <div class="l-item">
+            <p class="subhead">Educational Workshops</p>
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <div class="l-item">
+            <p class="subhead">Assessment Tools Available</p>
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="services">
+      <p class="subhead">Explore Our Range of Educational Services</p>
+      <img src="../static/assets/services.png" alt="" class="img1" />
+      <div class="items" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="column">
+          <div class="service">
+            <div class="circle">1</div>
+            <p class="title">Comprehensive Assessments</p>
+            <p class="desc">
+              Utilize our thorough assessments to identify dyslexia and inform
+              educational approaches.
+            </p>
+          </div>
+          <div class="service">
+            <div class="circle">2</div>
+            <p class="title">Engaging Workshops</p>
+            <p class="desc">
+              Join our workshops to deepen your understanding and skills in
+              supporting dyslexic individuals.
+            </p>
+          </div>
+        </div>
+        <img src="../static/assets/service.jpg" alt="" />
+        <div class="column">
+          <div class="service">
+            <div class="circle">3</div>
+            <p class="title">Advocacy Resources</p>
+            <p class="desc">
+              Access resources to empower advocacy and create positive change in
+              educational systems.
+            </p>
+          </div>
+          <div class="service">
+            <div class="circle">4</div>
+            <p class="title">Community Support</p>
+            <p class="desc">
+              Engage with our community for support and shared experiences in a
+              welcoming environment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="container">
+      <br>
+      <div>
+        <p class="subhead" id="Contact">Contact Us</p>
+        <p class="desc">
+          Reach out to our team to explore how we can work together to raise
+          awareness about dyslexia.
+        </p>
+      </div>
+      <form id="contact-form" method="post" action="/">
+        <div>
+          <p>First Name</p>
+          <input type="text" placeholder="First Name" name="contact_name" id="contact_name" required/>
+        </div>
+        <div>
+          <p>Email</p>
+          <input type="email" name="contact_email" placeholder="abc@gmail.com" id="contact_email" required/>
+        </div>
+        <div>
+          <p>Message</p>
+          <textarea name="contact_message" rows="6" id="contact_message" required></textarea>
+        </div>
+        <span
+          ><input type="checkbox" name="conditions" id="" required/> By checking this
+          box, I agree to the terms and conditions</span
+        >
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="support" class="container">
+      <img src="../static/assets/support_1.png" alt="" class="img1" />
+      <img src="../static/assets/support_2.png" alt="" class="img2" />
+      <div class="row">
+        <p class="subhead">Hear From Our Supporters</p>
+        <button class="readmore">Read More</button>
+      </div>
+      <div class="testimonials" data-aos="fade-left" data-aos-duration="1000">
+        <div class="testimonial">
+          <span
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i
+          ></span>
+          <p>
+            Dyslexia Awareness Network has changed my child's education for the
+            better.
+          </p>
+          <p class="author">Parent of a Dyslexic Child</p>
+        </div>
+        <div class="testimonial">
+          <span
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i
+          ></span>
+          <p>
+            The resources provided have been invaluable for my teaching
+            methodology and student success.
+          </p>
+          <p class="author">Educator's Feedback</p>
+        </div>
+        <div class="testimonial">
+          <span
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i
+          ></span>
+          <p>
+            Their workshops opened my eyes to different learning strategies that
+            truly help.
+          </p>
+          <p class="author">Support Teacher</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="subhead">
+        "Empowering lives through dyslexia education and impactful resources."
+      </p>
+      <div class="row">
+        <p class="brand">DysAid.</p>
+        <div class="pages">
+        </div>
+        <div class="brands">
+          <a href="/">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="/"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    setTimeout(function(){
+      var flashMessages = document.getElementById('flash-messages')
+      if (flashMessages) {
+        flashMessages.style.display = 'none'
+      }
+    }, 5000)
+  </script>
+</html>

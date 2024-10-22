@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 60%;
+    text-align: center;
+}
+
+@keyframes moveWords {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-5px); }
+}
+
+.word {
+    display: inline-block;
+    position: relative;
+    animation: moveWords 1.5s infinite; /* This will be removed when shuffling stops */
+}
+
+.button1{
+    background-color: #0e1f40;
+  border: none;
+  outline: none;
+  color: white;
+  margin: 1rem 0 0;
+  padding: 1rem 2rem;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+#stop-shuffle-btn, #home-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
